@@ -1,0 +1,26 @@
+<h2 [ngStyle]="{'color':mainColor}" class="title-course">{{course.value?.headline}}</h2>
+
+<div class="container-course">
+    <div class="svgDrawing" [innerHTML]="svgDrawing"></div>
+    <!-- <div class="-course"> -->
+
+    <div class="num-video">
+        <!-- <span class="svg" [innerHTML]="svg"></span> -->
+        <div class="svg-first"></div>
+        <div class="svg-second"></div>
+        {{numVideo}} videos
+    </div>
+
+    <h3 class="description-course">{{course.value?.description}}</h3>
+    <div class="container-summary">
+        <ul class="summary-course">
+            <li [ngStyle]="{'color':mainColor}" *ngFor="let item of course.value.summary"><span>{{item}}</span></li>
+        </ul>
+        <a routerLink="/chapters/{{course.value.id}}">
+            <div class="arrow">
+                <div class="svgArrow" [innerHTML]="svgArrow"></div>
+            </div>
+        </a>
+    </div>
+    <!-- </div> -->
+</div>

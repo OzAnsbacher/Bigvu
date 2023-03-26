@@ -1,0 +1,64 @@
+.container-chapters {
+    margin-top: 172px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .details-chapters {
+        margin-left: 29px;
+
+        .header-details {
+            display: flex;
+            margin-bottom: 27px;
+
+            h2 {
+                font-size: 24px;
+                font-weight: 700;
+                margin-right: 16px;
+
+            }
+
+            .total {
+                height: 32px;
+                width: 66px;
+                border-radius: 40px;
+                background: #00ABFE14;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .svgMedal {
+                    margin-right: 7px;
+                }
+            }
+        }
+
+        .list-chapters {
+            padding: 13px 19px;
+            border: solid 1px #7B8DB199;
+            border-radius: 10px;
+            li {
+                display: flex;
+                font-size: 14px;
+                font-weight: 500;
+                height: 33px;
+                // line-height: 20px;
+                // letter-spacing: 0em;
+                // text-align: left;
+
+
+                .finish {
+                    height: 20px;
+                    width: 20px;
+                    border: 1px solid #253658;
+                    border-radius: 50%;
+                    display: flex;justify-content: center;
+                    align-items: center;
+                }
+                .num-chapter{
+                    margin-left: 8px;
+                    margin-right: 4px;
+                }
+            }
+        }
+    }
+}

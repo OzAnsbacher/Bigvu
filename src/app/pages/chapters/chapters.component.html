@@ -1,0 +1,28 @@
+<div class="main-layout">
+    <div *ngIf="course" class="container-chapters">
+
+        <app-video-player [chapters]="course.chapters"></app-video-player>
+        <div class="details-chapters">
+            <div class="header-details">
+
+                <h2>{{course.headline}}</h2>
+                <div class="total">
+                    <div class="svgMedal" [innerHTML]="svgMedal"></div>
+                    <p>{{viewChapters}}/{{numChapters}}</p>
+                </div>
+            </div>
+            <div class="list-chapters">
+                <ul>
+                    <li *ngFor="let chapter of course.chapters; index as i">
+                        <span class="finish">
+                            <div class="svgArrow" [innerHTML]="svgArrow"></div>
+                        </span>
+                        <span class="num-chapter">{{i+1}}.</span>
+                        <p>{{chapter.title}}</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>

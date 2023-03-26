@@ -1,0 +1,15 @@
+{
+    "/course/*": {
+      "target": "https://interviews.bigvu.tv",
+      "secure": true,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    }
+  }
+ 
+  
+  
+  
+  
+  
+  

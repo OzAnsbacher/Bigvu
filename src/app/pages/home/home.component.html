@@ -1,0 +1,11 @@
+<div class="main-layout">
+
+    <h1 class="title-home">{{title}}</h1>
+    <h2 class="subtitle-home">{{subtitle}}</h2>
+
+    <ul class="container-ul">
+        <li *ngFor="let course of courses$?.result| keyvalue; index as i">
+            <app-course [course]="course" [mainColor]="color[i]"></app-course>
+        </li>
+    </ul>
+</div>

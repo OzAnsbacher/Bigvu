@@ -1,0 +1,109 @@
+.title-course {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.container-course {
+    border: 1px solid silver;
+    border-radius: 15px;
+    padding: 16px;
+    padding-right: 28px;
+    display: flex;
+    flex-direction: column;
+    height: 180px;
+    width: 388px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+
+    .svgDrawing {
+        position: absolute;
+        top: -5px;
+        right: -3px;
+    }
+
+    .num-video {
+        background-color: #25365899;
+        color: white;
+        align-self: start;
+        font-size: 14px;
+        padding: 6px 8px;
+        display: flex;
+        align-items: center;
+        border-radius: 4px;
+        // margin-bottom: 43px;
+
+
+        .svg-first {
+            background-color: white;
+            height: 12px;
+            width: 13px;
+            border-radius: 3px;
+            margin-right: 2px;
+        }
+
+        .svg-second {
+            background-color: white;
+            height: 8px;
+            width: 4px;
+            border-radius: 3px 0 0 3px;
+            margin-right: 5px;
+        }
+    }
+
+    .description-course {
+        display: flex;
+        font-size: 16px;
+        font-weight: 700;
+        max-width: 196px;
+        line-height: 22.4px;
+        margin-bottom: 6px;
+        flex-grow: 1;
+        align-items: end;
+    }
+
+    .container-summary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .summary-course {
+            font-size: 12px;
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 6px;
+            flex-grow: 1;
+            list-style: disc;
+
+            li {
+
+                margin-left: 12px;
+
+                span {
+                    color: black;
+                }
+            }
+
+            // li::before {
+            //     content: "\2022";
+            //     color: red;
+            //     font-weight: bold;
+            //     display: inline-block;
+            // width: 1em;
+
+            // }
+        }
+
+        .arrow {
+            height: 48px;
+            width: 48px;
+            background-color: #253658;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 43px;
+        }
+    }
+}

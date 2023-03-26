@@ -1,0 +1,21 @@
+.title-home {
+    margin-top: 36px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.subtitle-home {
+    font-size: 14px;
+    font-weight: 400;
+    white-space: pre-line;
+    margin-top: 12px;
+    margin-bottom: 32px;
+}
+
+.container-ul {
+    display: flex;
+    flex-wrap: wrap;
+    li{
+        margin-right: 15px;
+    }
+}
