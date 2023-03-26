@@ -1,5 +1,6 @@
 import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { ChaptersService } from 'src/app/services/chapters.service';
 
 @Component({
   selector: 'app-course',
@@ -16,11 +17,14 @@ export class CourseComponent implements OnInit, OnChanges {
   svgDrawing!: SafeHtml;
   svgArrow!: SafeHtml;
 
-  numVideo = 5
-  constructor(private sanitizer: DomSanitizer) { }
+  numVideo: number | undefined
+   constructor(private sanitizer: DomSanitizer, private chaptersService: ChaptersService) { }
 
   ngOnInit(): void {
-console.log(this.course);
+    this.chaptersService.getCourse(this.course.value.id).subscribe((course) => {
+      this.numVideo = course.chapters?.length
+    })
+
 
     // this.mainColor = this.getRandomBrightColor()
     this.svg = this.sanitizer.bypassSecurityTrustHtml(`<svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">

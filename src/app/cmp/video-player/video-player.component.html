@@ -1,6 +1,4 @@
-<video *ngIf="currentChapter" controls>
-    <source src={{currentChapter}} type="video/mp4">
-    <source src={{currentChapter}} type="video/ogg">
+<video #myVideo *ngIf="currentChapterUrl" controls autoplay (timeupdate)="onTimeUpdate()" (canplay)="startVideo()">
+    <source [src]="currentChapterUrl" type="video/mp4">
+    <source [src]="currentChapterUrl" type="video/ogg">
 </video>
-<!-- <iframe *ngIf="chapters.asset?.resource.hlsPlaylistUrl" src=c.resource.hlsPlaylistUrl frameborder="0"></iframe> -->
-<!-- <p>{{chapters| json}}</p> -->

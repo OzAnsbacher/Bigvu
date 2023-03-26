@@ -1,7 +1,7 @@
 <div class="main-layout">
     <div *ngIf="course" class="container-chapters">
 
-        <app-video-player [chapters]="course.chapters"></app-video-player>
+        <app-video-player [chapters]="course.chapters" [numCurrentChapter]="numCurrentChapter"></app-video-player>
         <div class="details-chapters">
             <div class="header-details">
 
@@ -13,12 +13,15 @@
             </div>
             <div class="list-chapters">
                 <ul>
-                    <li *ngFor="let chapter of course.chapters; index as i">
-                        <span class="finish">
+                    <li *ngFor="let chapter of course.chapters; index as i"
+                        [ngClass]="i==numCurrentChapter ? 'current-chapter' : '' " (click)="changeChapter(i)">
+                        <span *ngIf="!isFinish(chapter.id)" class="finish">
                             <div class="svgArrow" [innerHTML]="svgArrow"></div>
                         </span>
+                        <div *ngIf="isFinish(chapter.id)" class="svgV" [innerHTML]="svgV"></div>
                         <span class="num-chapter">{{i+1}}.</span>
                         <p>{{chapter.title}}</p>
+                        <p>{{chapter.asset.resource.duration*1000 | date:'mm:ss' }}</p>
                     </li>
                 </ul>
             </div>

@@ -22,9 +22,7 @@ export class HomeComponent implements OnInit {
       this.courses$=courses
       
     })
-    // this.courses$ = this.chaptersService.courses$
-    // console.log(this.courses$);
-
+ 
   }
 
 
